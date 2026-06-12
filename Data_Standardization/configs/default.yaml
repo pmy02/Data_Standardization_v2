@@ -1,0 +1,33 @@
+# menunorm pipeline configuration
+# Relative paths resolve against the repository root.
+
+seed: 42
+
+input: data/synthetic/menu_synthetic.csv
+lexicon_dir: data/lexicon
+output_dir: results/latest
+
+columns:
+  store: store_id
+  category: store_category
+  barcode: barcode
+  name: raw_name
+  gold: gold_label            # omit for unlabeled production data
+
+filter:
+  nonfood_categories: [편의점, 마트]
+  not_target_label: NOT_TARGET
+
+normalize:
+  drop_residual_latin: true   # remove Latin words not covered by the glossary
+
+tokenizer: auto               # auto | mecab | simple
+user_dictionary: true         # compile data/lexicon/user_dictionary_terms.txt
+
+match:
+  ngram_min: 2
+  ngram_max: 4
+  threshold: 0.45             # abstention threshold (see threshold_sweep.csv)
+
+discovery:
+  max_clusters: 15            # label proposals from unmatched names
