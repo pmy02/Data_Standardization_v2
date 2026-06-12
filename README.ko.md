@@ -179,8 +179,8 @@ matcher.match([clean])                          # -> 아메리카노, score 1.0
 ```
 
 자체 데이터에 적용하려면 `configs/default.yaml`의 입력 경로를 바꾸고
-`columns:` 아래에 열 이름을 매핑하면 됩니다(정답 레이블이 있을 때만 `gold:`
-지정).
+`columns:` 아래에 열 이름을 매핑하면 됩니다.<br>
+(정답 레이블이 있을 때만 `gold:`지정)
 
 ## 프로젝트 구조
 
@@ -203,9 +203,7 @@ matcher.match([clean])                          # -> 아메리카노, score 1.0
 └── notebooks/legacy/      # 2023년 원본 노트북 (출처 보존)
 ```
 
-## 재현성
-
-이 문서의 모든 결과는 아래 명령으로 재생성됩니다.
+## 재현
 
 ```bash
 pip install -e ".[mecab,figures,dev]" && pytest -q
@@ -213,9 +211,6 @@ python scripts/generate_synthetic.py --n 20000 --seed 42
 python scripts/run_pipeline.py --config configs/default.yaml
 ```
 
-시드가 같으면 결과는 결정적입니다. Python 3.12, pandas 3.0.2,
-scikit-learn 1.8.0에서 검증했고, CI는 Python 3.10/3.12, 두 토크나이저 경로,
-린트, 단위 테스트, 1,000행 엔드투엔드 스모크 실행을 모두 수행합니다.
 
 ## 로드맵
 
@@ -225,19 +220,12 @@ scikit-learn 1.8.0에서 검증했고, CI는 Python 3.10/3.12, 두 토크나이�
 - [ ] 저마진 매칭을 검수 큐로 보내는 액티브 러닝 루프
 - [ ] 자모 단위 n-gram으로 hard 트랙 오타 견고성 강화
 
-## 인용
-
-```bibtex
-@software{park2023menunorm,
-  author  = {Park, Minyoung},
-  title   = {MenuNorm: Korean Product-Name Standardization},
-  year    = {2023},
-  url     = {https://github.com/pmy02/Data_Standardization}
-}
-```
 
 ## 라이선스
 
-MIT — [LICENSE](LICENSE) 참고.
+MIT — [LICENSE](LICENSE)
 
-관리: [@pmy02](https://github.com/pmy02). 이슈와 PR을 환영합니다.
+## 연락처
+[@pmy02](https://github.com/pmy02).
+minyo0119@naver.com
+
