@@ -218,17 +218,12 @@ your column names under `columns:` (set `gold:` only if you have labels).
 
 ## Reproducibility
 
-Everything in this README regenerates with:
-
 ```bash
 pip install -e ".[mecab,figures,dev]" && pytest -q
 python scripts/generate_synthetic.py --n 20000 --seed 42
 python scripts/run_pipeline.py --config configs/default.yaml
 ```
 
-Deterministic given the seed. Verified with Python 3.12, pandas 3.0.2,
-scikit-learn 1.8.0; CI exercises Python 3.10 and 3.12, both tokenizer
-backends, lint, the unit suite, and a 1k-row end-to-end smoke run.
 
 ## Roadmap
 
@@ -238,19 +233,10 @@ backends, lint, the unit suite, and a 1k-row end-to-end smoke run.
 - [ ] Active-learning loop: route low-margin matches into the review queue
 - [ ] Hangul jamo-level n-grams for stronger typo robustness on the hard track
 
-## Citation
-
-```bibtex
-@software{park2023menunorm,
-  author  = {Park, Minyoung},
-  title   = {MenuNorm: Korean Product-Name Standardization},
-  year    = {2023},
-  url     = {https://github.com/pmy02/Data_Standardization}
-}
-```
 
 ## License
 
 MIT — see [LICENSE](LICENSE).
 
-Maintained by [@pmy02](https://github.com/pmy02). Issues and PRs welcome.
+## Contact
+[@pmy02](https://github.com/pmy02). Issues and PRs welcome.
