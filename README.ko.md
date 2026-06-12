@@ -2,7 +2,7 @@
 
 # MenuNorm — 한국어 상품명 표준화 파이프라인
 
-[![CI](https://github.com/pmy02/Data_Standardization/actions/workflows/ci.yml/badge.svg)](https://github.com/pmy02/Data_Standardization/actions)
+[![CI](https://github.com/pmy02/Data_Standardization_v2/actions/workflows/ci.yml/badge.svg)](https://github.com/pmy02/Data_Standardization_v2/actions)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](pyproject.toml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
